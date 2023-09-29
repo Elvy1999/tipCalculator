@@ -27,15 +27,14 @@ body {
 
 .card {
   background-color: hsl(0, 0%, 100%);
-  /* temporary */
   width: 100%;
   border-radius: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 2.5rem;
+  gap: 1.5rem;
+  padding: 2rem 4rem;
 }
 .card .input {
   border: 1px solid black;
@@ -43,7 +42,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 1rem 1rem;
 }
 .card .input .label-wrapper {
   display: flex;
@@ -52,7 +52,7 @@ body {
 }
 .card .input .label-wrapper label {
   color: hsl(186, 14%, 43%);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 .card .input .label-wrapper .error-msg {
@@ -61,7 +61,7 @@ body {
   font-size: 1.5rem;
 }
 .card .input .inp-text {
-  background-color: hsl(185, 41%, 84%);
+  background-color: #f3f8fb;
   border: none;
   width: 100%;
   border-radius: 0.5rem;
@@ -87,13 +87,37 @@ body {
 .card .input .btn-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  border: 1px solid green;
+  padding: 0.5rem 0rem;
+}
+.card .input .btn-wrapper .btn {
+  border: 1px solid transparent;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.4rem;
+  font-size: 2.2rem;
+  width: 46%;
+  padding: 0.5rem;
+  text-align: center;
+}
+.card .input .btn-wrapper .btn:hover {
+  background-color: #26c2ad;
+  color: hsl(183, 100%, 15%);
+}
+.card .input .btn-wrapper #inp-tip {
+  border-radius: 0.4rem;
+  font-size: 2.2rem;
+  padding: 0.5rem 0rem;
+  background-color: #f3f8fb;
+  text-align: center;
+  width: 46%;
 }
 .card .output {
   background-color: hsl(183, 100%, 15%);
-  border: 1px solid black;
+  border: 1px solid orange;
+  border-radius: 0.4rem;
   width: 100%;
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */
