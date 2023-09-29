@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//variables
+$StrongCyan: hsl(183, 100%, 15%);
+$VeryDarkCyan: hsl(183, 100%, 15%);
+$DarkGrayish: hsl(186, 14%, 43%);
+$GrayishCyan: hsl(184, 14%, 56%);
+$LightGrayish: hsl(185, 41%, 84%);
+$VeryLightGrayishCyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+$inputFormSize: 24px;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space mono", monospace;
+  background-color: $LightGrayish;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 5rem 0 4rem 0;
+}
+
+.card {
+  background-color: $White;
+  /* temporary */
+
+  width: 100%;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2.5rem;
+
+  .input {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    .label-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      label {
+        color: $DarkGrayish;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .error-msg {
+        color: indianred;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+
+    .inp-text {
+      background-color: $LightGrayish;
+      border: none;
+      width: 100%;
+      border-radius: 0.5rem;
+      color: $VeryDarkCyan;
+      font-family: "Space Mono", monospace;
+      font-size: 2.4rem;
+      font-weight: 700;
+      text-align: right;
+      padding: 0.4rem 1rem;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $StrongCyan;
+      }
+    }
+
+    .inp-wrapper {
+      position: relative;
+    }
+    img {
+      position: absolute;
+      left: 2rem;
+      top: 1.5rem;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      border: 1px solid green; //temporary
+    }
+  }
+
+  .output {
+    background-color: $VeryDarkCyan;
+    border: 1px solid black;
+    width: 100%;
+  }
+}

@@ -13,24 +13,69 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h2>SPLI</h2>
-        <h2>TTER</h2>
-      </header>
-      <div class="container">
-        <div class="left-side">
-          <div class="bill">
-            <p>Bill</p>
-            <input type="text" id="bill" />
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+      <div class="card">
+        <div class="input">
+          <div class="bill-container">
+            <div class="label-wrapper">
+              <label for="inp-bill">Bill</label>
+            </div>
+            <div class="inp-wrapper">
+              <input
+                class="inp-text"
+                type="text"
+                name="inp-bill"
+                id="inp-bill"
+                placeholder="0.0"
+              />
+              <img src="images/icon-dollar.svg" alt="dollar-icon" />
+            </div>
           </div>
-          <div>hello</div>
+          <div class="tip-container">
+            <div class="label-wrapper">
+              <label for="inp-tip">Select Tip %</label>
+            </div>
+            <div class="btn-wrapper">
+              <div class="btn">5%</div>
+              <div class="btn">10%</div>
+              <div class="btn">15%</div>
+              <div class="btn">25%</div>
+              <div class="btn">50%</div>
+              <input
+                type="text"
+                name="inp-tip"
+                id="inp-tip"
+                class="inp-text"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="people-container">
+            <div class="label-wrapper">
+              <label for="inp-people">Number of People</label>
+              <div class="error-msg">Can't be Zero</div>
+            </div>
+
+            <div class="inp-wrapper">
+              <input
+                class="inp-text"
+                type="text"
+                name="inp-people"
+                id="inp-people"
+                placeholder="1"
+              />
+              <img src="images/icon-person.svg" alt="person-icon" />
+            </div>
+          </div>
         </div>
-        <div class="right-side"></div>
+        <div class="output">output</div>
       </div>
     </div>
   </body>
