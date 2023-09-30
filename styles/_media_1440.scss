@@ -1,0 +1,16 @@
+@media screen and (min-width: 1000px) {
+  .card {
+    width: 65%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 3.4rem;
+  }
+  .input {
+    width: 100%;
+  }
+
+  .output {
+    width: 100%;
+  }
+}

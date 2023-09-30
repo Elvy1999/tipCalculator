@@ -1,0 +1,172 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space mono", monospace;
+  background-color: $LightGrayish;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 5rem 0 3rem 0;
+}
+
+.card {
+  background-color: $White;
+  width: 100%;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 2.5rem;
+  font-family: "Space Mono", monospace;
+  margin: 1rem;
+
+  .input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 1rem;
+
+    .label-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      label {
+        color: $DarkGrayish;
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
+      .error-msg {
+        color: indianred;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+
+    .inp-text {
+      background-color: $VeryLightGrayishCyan;
+      border: none;
+      width: 100%;
+      border-radius: 0.5rem;
+      color: $VeryDarkCyan;
+      font-family: "Space Mono", monospace;
+      font-size: 2.4rem;
+      font-weight: 700;
+      text-align: right;
+      padding: 0.4rem 1rem;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $StrongCyan;
+      }
+    }
+
+    .inp-wrapper {
+      position: relative;
+    }
+    img {
+      position: absolute;
+      left: 2rem;
+      top: 1.5rem;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      padding: 0.5rem 0rem;
+
+      .btn {
+        border: 1px solid transparent;
+        background-color: $VeryDarkCyan;
+        color: $White;
+        border-radius: 0.4rem;
+        font-size: 2.4rem;
+        width: 46%;
+        padding: 0.6rem;
+        text-align: center;
+
+        &:hover {
+          background-color: #26c2ad;
+          color: $VeryDarkCyan;
+        }
+      }
+
+      #inp-tip {
+        border-radius: 0.4rem;
+        font-size: 2.2rem;
+        padding: 0.5rem 0rem;
+        background-color: $VeryLightGrayishCyan;
+        text-align: center;
+        width: 46%;
+      }
+    }
+  }
+
+  .output {
+    background-color: $VeryDarkCyan;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .output-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1.4rem 0 2.4rem;
+
+      .first {
+        color: $White;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+      .second {
+        color: $GrayishCyan;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .value {
+        color: #22bda8;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    }
+
+    .reset {
+      width: 100%;
+      background-color: #26c2ad;
+      color: $VeryDarkCyan;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem;
+      border-radius: 0.5rem;
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
