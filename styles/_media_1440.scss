@@ -1,15 +1,14 @@
 @media screen and (min-width: 1200px) {
   .card {
-    width: 65%;
+    width: 60%;
     flex-direction: row;
     border-radius: 2.5rem;
     align-items: stretch;
     padding: 3.4rem;
     transition: all 0.3s ease;
-
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     .input {
       width: 100%;
-      border: 1px solid black; //temporary
       padding: 0 3.5rem 1.5rem 1.5rem;
 
       .btn-wrapper {
@@ -27,14 +26,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
-      .output-wrapper {
-        .description-container {
-          .value {
-            font-size: 20rem;
-          }
-        }
-      }
     }
   }
 }
