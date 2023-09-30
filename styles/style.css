@@ -99,7 +99,7 @@ body {
   background-color: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
   border-radius: 0.4rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   width: 46%;
   padding: 0.6rem;
   text-align: center;
@@ -109,12 +109,10 @@ body {
   color: hsl(183, 100%, 15%);
 }
 .card .input .btn-wrapper #inp-tip {
-  border-radius: 0.4rem;
-  font-size: 2.2rem;
-  padding: 0.5rem 0rem;
   background-color: #f3f8fb;
   text-align: center;
   width: 46%;
+  font-size: 2rem;
 }
 .card .output {
   background-color: hsl(183, 100%, 15%);
@@ -160,18 +158,33 @@ body {
   transform: scale(0.95);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .card {
     width: 65%;
     flex-direction: row;
     border-radius: 2.5rem;
     align-items: stretch;
     padding: 3.4rem;
+    transition: all 0.3s ease;
   }
-  .input {
+  .card .input {
     width: 100%;
+    border: 1px solid black;
+    padding: 0 3.5rem 1.5rem 1.5rem;
   }
-  .output {
+  .card .input .btn-wrapper .btn {
+    width: 30.5%;
+  }
+  .card .input .btn-wrapper #inp-tip {
+    width: 30.5%;
+  }
+  .card .output {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card .output .output-wrapper .description-container .value {
+    font-size: 20rem;
   }
 }/*# sourceMappingURL=style.css.map */

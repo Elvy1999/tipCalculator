@@ -99,7 +99,7 @@ body {
         background-color: $VeryDarkCyan;
         color: $White;
         border-radius: 0.4rem;
-        font-size: 2.4rem;
+        font-size: 2rem;
         width: 46%;
         padding: 0.6rem;
         text-align: center;
@@ -111,12 +111,10 @@ body {
       }
 
       #inp-tip {
-        border-radius: 0.4rem;
-        font-size: 2.2rem;
-        padding: 0.5rem 0rem;
         background-color: $VeryLightGrayishCyan;
         text-align: center;
         width: 46%;
+        font-size: 2rem;
       }
     }
   }
