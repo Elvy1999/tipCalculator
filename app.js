@@ -6,6 +6,7 @@ const people = document.getElementById("inp-people");
 const error_msg = document.querySelector(".error-msg");
 const tip_per_person_id = document.getElementById("tip-per-person");
 const total_per_person_id = document.getElementById("total-per-person");
+const reset_btn = document.querySelector(".reset");
 
 //Calculation variables
 let billValue = 0.0;
@@ -40,7 +41,6 @@ function handleClick(e) {
   remove_btns_active();
   tipPercentage = parseFloat(e.target.innerHTML) / 100;
   e.target.classList.add("btn-active");
-  console.log(tipPercentage);
   callBoth();
 }
 
@@ -69,13 +69,16 @@ function setTipValue() {
     this.value = "100";
   }
   tipPercentage = this.value / 100;
-  console.log(tipPercentage);
   callBoth();
 }
 
 function calcTotalBill() {
   if (peopleNumber >= 1 && billValue >= 1) {
-    total_per_person = billValue / peopleNumber;
+    if (tipPercentage != 0) {
+      total_per_person = billValue / peopleNumber + tip_per_person;
+    } else {
+      total_per_person = billValue / peopleNumber;
+    }
     total_per_person = parseFloat(total_per_person.toFixed(2));
     total_per_person_id.innerText = total_per_person;
   } else {
@@ -85,8 +88,7 @@ function calcTotalBill() {
 
 function calcTotalTip() {
   if (peopleNumber >= 1 && billValue >= 1) {
-    tip_per_person = total_per_person * tipPercentage;
-    console.log(tip_per_person);
+    tip_per_person = (billValue * tipPercentage) / peopleNumber;
     tip_per_person = parseFloat(tip_per_person.toFixed(2));
     tip_per_person_id.innerText = tip_per_person;
   } else {
@@ -94,9 +96,23 @@ function calcTotalTip() {
   }
 }
 
+function reset_calc() {
+  remove_btns_active();
+  billValue = 0.0;
+  tipPercentage = 0.0;
+  peopleNumber = 0;
+  total_per_person = 0;
+  tip_per_person = 0;
+  tip_per_person_id.innerText = "0.00";
+  total_per_person_id.innerText = "0.00";
+  inpTip.value = "Custom";
+  bill.value = "0";
+  people.value = "0";
+}
+
 function callBoth() {
-  calcTotalBill();
   calcTotalTip();
+  calcTotalBill();
 }
 
 //event listeners
@@ -106,3 +122,4 @@ tip_btns.forEach((btn) => {
 });
 inpTip.addEventListener("input", setTipValue);
 people.addEventListener("input", setPeopleValue);
+reset_btn.addEventListener("click", reset_calc);
