@@ -106,7 +106,7 @@ function reset_calc() {
   tip_per_person_id.innerText = "0.00";
   total_per_person_id.innerText = "0.00";
   inpTip.value = "Custom";
-  bill.value = "0";
+  bill.value = "0.0";
   people.value = "0";
 }
 
