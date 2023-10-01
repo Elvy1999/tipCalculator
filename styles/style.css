@@ -36,6 +36,7 @@ body {
   align-items: center;
   gap: 1.5rem;
   padding: 2rem 2.5rem;
+  padding-bottom: 4rem;
   font-family: "Space Mono", monospace;
   margin: 1rem;
 }
@@ -167,9 +168,90 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
   .card {
     width: 48%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 3.4rem;
+    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .card .input {
+    width: 100%;
+    padding: 0 3.5rem 1.5rem 1.5rem;
+  }
+  .card .input .btn-wrapper .btn {
+    width: 30.5%;
+  }
+  .card .input .btn-wrapper #inp-tip {
+    width: 30.5%;
+  }
+  .card .output {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  .card {
+    width: 65%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 3.4rem;
+    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .card .input {
+    width: 100%;
+    padding: 0 3.5rem 1.5rem 1.5rem;
+  }
+  .card .input .btn-wrapper .btn {
+    width: 30.5%;
+  }
+  .card .input .btn-wrapper #inp-tip {
+    width: 30.5%;
+  }
+  .card .output {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1250px) and (max-width: 1400px) {
+  .card {
+    width: 70%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 3.4rem;
+    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .card .input {
+    width: 100%;
+    padding: 0 3.5rem 1.5rem 1.5rem;
+  }
+  .card .input .btn-wrapper .btn {
+    width: 30.5%;
+  }
+  .card .input .btn-wrapper #inp-tip {
+    width: 30.5%;
+  }
+  .card .output {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1250px) {
+  .card {
+    width: 90%;
     flex-direction: row;
     border-radius: 2.5rem;
     align-items: stretch;
