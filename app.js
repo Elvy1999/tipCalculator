@@ -4,7 +4,7 @@ const tip_btns = document.querySelectorAll(".tip");
 const inpTip = document.getElementById("inp-tip");
 const people = document.getElementById("inp-people");
 const error_msg = document.querySelector(".error-msg");
-const tip_per_person_id = document.getElementById("tip-per-person");
+const TipPerPersonId = document.getElementById("tip-per-person");
 const total_per_person_id = document.getElementById("total-per-person");
 const reset_btn = document.querySelector(".reset");
 
@@ -90,9 +90,9 @@ function calcTotalTip() {
   if (peopleNumber >= 1 && billValue >= 1) {
     tip_per_person = (billValue * tipPercentage) / peopleNumber;
     tip_per_person = parseFloat(tip_per_person.toFixed(2));
-    tip_per_person_id.innerText = tip_per_person;
+    TipPerPersonId.innerText = tip_per_person;
   } else {
-    tip_per_person_id.innerText = "0.00";
+    TipPerPersonId.innerText = "0.00";
   }
 }
 
@@ -103,7 +103,7 @@ function reset_calc() {
   peopleNumber = 0;
   total_per_person = 0;
   tip_per_person = 0;
-  tip_per_person_id.innerText = "0.00";
+  TipPerPersonId.innerText = "0.00";
   total_per_person_id.innerText = "0.00";
   inpTip.value = "Custom";
   bill.value = "0.0";
